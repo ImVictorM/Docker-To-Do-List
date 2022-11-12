@@ -1,7 +1,8 @@
-# FROM node:14-alpine
+FROM node:14-alpine
 
-# EXPOSE 3000
-
-# ADD node_modules.tar.gz .
-# RUN npm i
-# CMD [ "npm start" ]
+EXPOSE 3000
+WORKDIR /front-end
+COPY . .
+ADD node_modules.tar.gz .
+RUN npm i
+CMD [ "npm start" ]
