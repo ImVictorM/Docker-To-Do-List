@@ -8,6 +8,7 @@ services:
       - todoback
     environment:
       - REACT_APP_API_HOST=todoback
+      - REACT_APP_API_PORT=3001
     networks:
       - main-network
     restart: always
@@ -25,6 +26,7 @@ services:
       - todofront
     environment:
       - FRONT_HOST=todofront
+      - FRONT_PORT=3000
     networks:
       - main-network
     restart: always
